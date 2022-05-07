@@ -1,4 +1,4 @@
-const { generateJWToken } = require("../CommonLib/JWToken");
+// const { generateJWToken } = require("../CommonLib/JWToken");
 const users = require("../Model/users");
 
 // const signIn = (req, res, next) => {
@@ -22,7 +22,6 @@ const signIn = async (req, res, next) => {
     try {
         let id1 = { email: req.body.id };
         let id2 = { phoneNumber: req.body.id };
-
         let response = await users.find({ $or: [id1, id2] });
 
         res.status(200).json(response);
