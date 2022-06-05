@@ -8,3 +8,4 @@ http.createServer(app).listen(PORT, () => {
     new connectToDb();
     console.log(`Server is running on PORT ${PORT}`);
 });
+ 
